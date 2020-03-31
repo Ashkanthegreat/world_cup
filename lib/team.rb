@@ -5,4 +5,8 @@ class Team
     @country = country
     @eliminated = false
   end
+
+  def eliminated?
+    @eliminated
+  end
 end
