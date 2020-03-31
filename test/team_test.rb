@@ -28,6 +28,14 @@ class TeamTest < Minitest::Test
     @team.add_player(@mbappe)
     @team.add_player(@pogba)
 
-    assert_equal [@mbappe, @pogba], @team.players 
+    assert_equal [@mbappe, @pogba], @team.players
+  end
+
+  def test_players_by_position
+    @team.add_player(@mbappe)
+    @team.add_player(@pogba)
+
+    assert_equal [@pogba], @team.players_by_position('midfielder')
+    assert_equal [@mbappe], @team.players_by_position('forward')
   end
 end

@@ -15,5 +15,9 @@ class Team
     @players << player
   end
 
-  
+  def players_by_position(position)
+    @players.find_all { |player|  player.position == position }
+  end
+
+
 end
